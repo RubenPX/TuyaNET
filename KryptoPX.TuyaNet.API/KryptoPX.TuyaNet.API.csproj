@@ -1,29 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <AssemblyName>TuyaNet</AssemblyName>
         <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+    
+    <!-- Nuget Info -->
+    <PropertyGroup>
         <PackageId>PXByte.TuyaNet.API</PackageId>
         <Title>TuyaNet API</Title>
+        <Description>Package to comunicate with Tuya API</Description>
         <Authors>PXByte</Authors>
         <Copyright>PXByte</Copyright>
         <RepositoryUrl>https://github.com/PX-Byte/TuyaNet</RepositoryUrl>
         <RepositoryType>Package</RepositoryType>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <Description>Package to comunicate with Tuya API</Description>
-        <license>https://github.com/PX-Byte/TuyaNET/blob/master/LICENSE</license>
-        <PackageLicenseUrl>https://github.com/PX-Byte/TuyaNET/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageLicenseFile>README.md</PackageLicenseFile>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <ItemGroup>
         <None Include="../README.md" Pack="true" PackagePath="/"/>
+        <None Include="../LICENSE" Pack="true" PackagePath="/"/>
         <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.12.1">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="System.Text.Json" Version="9.0.1" />
     </ItemGroup>
 
 

@@ -3,9 +3,9 @@
 namespace KryptoPX.TuyaNet.Core.Entity;
 
 public class TuyaResponse<T>() : ITuyaResponse<T> {
-    public bool success { get; init; }
-    public string t { get; init; }
-    public string tid { get; init; }
-    public string? msg { get; init; }
-    public T? result { get; init; }
+    public bool success { get; set; }
+    public string t { get; set; }
+    public string tid { get; set; }
+    public string? msg { get; set; }
+    public T? result { get; set; }
 }

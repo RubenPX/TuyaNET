@@ -1,8 +1,8 @@
 ﻿namespace KryptoPX.TuyaNet.API.Interfaces;
 
 public interface ITuyaTokenResult {
-    string access_token { get; init; }
-    int expire_time { get; init; }
-    string refresh_token { get; init; }
-    string uid { get; init; }
+    string access_token { get; set; }
+    int expire_time { get; set; }
+    string refresh_token { get; set; }
+    string uid { get; set; }
 }
