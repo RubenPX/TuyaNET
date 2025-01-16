@@ -26,10 +26,7 @@ jobs:
           dotnet-version: '8.*'
           
       - name: Build
-        run: dotnet build ${{ env.TARGET_PROJECT }}
-
-      - name: Pack
-        run: dotnet pack ${{ env.TARGET_PROJECT }}
+        run: dotnet build ${{ env.TARGET_PROJECT }} --configuration Release
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
