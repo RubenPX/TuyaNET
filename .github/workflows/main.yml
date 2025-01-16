@@ -14,7 +14,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      APP_NAME: PXByte.TuyaNET.API
       TARGET_PROJECT: ./KryptoPX.TuyaNet.API/KryptoPX.TuyaNet.API.csproj
       CONFIGURATION: Release
     steps:
@@ -35,5 +34,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.APP_NAME }}
-          path: ${{ env.OUTPUT_DIR }}
+          name: Nuget File
+          path: ./KryptoPX.TuyaNet.API/bin/Release/*.nupkg
