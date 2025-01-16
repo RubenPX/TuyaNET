@@ -11,7 +11,7 @@ TuyaNET is a .NET library designed to interact with the Tuya API.
 To install the library, you can use NuGet Package Manager:
 
 ```bash
-Install-Package PXByte.TuyaNET.API
+Install-Package PXByte.TuyaNet.API
 ```
 
 ## Configuration
