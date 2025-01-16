@@ -6,23 +6,24 @@
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>PXByte.TuyaNet.API</PackageId>
-        <Title>TuyaNet Core</Title>
+        <Title>TuyaNet API</Title>
         <Authors>PXByte</Authors>
         <Copyright>PXByte</Copyright>
         <RepositoryUrl>https://github.com/PX-Byte/TuyaNet</RepositoryUrl>
         <RepositoryType>Package</RepositoryType>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <license>https://github.com/PX-Byte/TuyaNET/blob/master/LICENSE</license>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Description>Package to comunicate with Tuya API</Description>
+        <license>https://github.com/PX-Byte/TuyaNET/blob/master/LICENSE</license>
+        <PackageLicenseUrl>https://github.com/PX-Byte/TuyaNET/blob/master/LICENSE</PackageLicenseUrl>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="README.md" Pack="true" PackagePath="\"/>
-      <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.12.1">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
+        <None Include="../README.md" Pack="true" PackagePath="/"/>
+        <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.12.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
 
