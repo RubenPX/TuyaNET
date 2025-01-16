@@ -26,10 +26,6 @@
     <ItemGroup>
         <None Include="../README.md" Pack="true" PackagePath="/"/>
         <None Include="../LICENSE" Pack="true" PackagePath="/"/>
-        <PackageReference Include="NuGet.Build.Tasks.Pack" Version="6.12.1">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
         <PackageReference Include="System.Text.Json" Version="9.0.1" />
     </ItemGroup>
 

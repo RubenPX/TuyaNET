@@ -1,9 +1,9 @@
 ﻿namespace KryptoPX.TuyaNet.API.Interfaces;
 
 public interface ITuyaPaginationResponse<T> {
-    string Message { get; set; }
-    string current_row_key { get; set; }
-    string device_id { get; set; }
-    bool has_next { get; set; }
-    List<T> data { get; set; }
+    string Message { get; }
+    string current_row_key { get; }
+    string device_id { get; }
+    bool has_next { get; }
+    List<T> data { get; }
 }

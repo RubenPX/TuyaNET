@@ -2,9 +2,9 @@
 
 namespace KryptoPX.TuyaNet.Core.Entity;
 
-public class TuyaTokenResult : ITuyaTokenResult {
-    public string access_token { get; set; }
-    public int expire_time { get; set; }
-    public string refresh_token { get; set; }
-    public string uid { get; set; }
+public class TuyaTokenResult(string accessToken, int expireTime, string refreshToken, string uid) : ITuyaTokenResult {
+    public string uid { get; } = uid;
+    public string access_token { get; } = accessToken;
+    public string refresh_token { get; } = refreshToken;
+    public int expire_time { get; } = expireTime;
 }
