@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       APP_NAME: PXByte.TuyaNET.API
-      OUTPUT_DIR: ./KryptoPX.TuyaNet.API/output
+      OUTPUT_DIR: ./KryptoPX.TuyaNet.API/output/
       TARGET_FOLDER: ./KryptoPX.TuyaNet.API/
       CONFIGURATION: Release
     steps:
@@ -36,5 +36,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.TUYA_API_NAME }}
+          name: ${{ env.APP_NAME }}
           path: ${{ env.OUTPUT_DIR }}
