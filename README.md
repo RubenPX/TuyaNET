@@ -7,9 +7,6 @@ yet implemented.
 ## Features
 
 - Connect to the Tuya API
-- Manage Tuya smart devices
-- Retrieve device status
-- Execute device commands
 
 ## Installation
 
@@ -57,8 +54,8 @@ an account on the [Tuya IoT Platform](https://iot.tuya.com/) and creating a new 
 ## Roadmap
 
 - [x] Implement basic API connection
-- [x] Retrieve and manage devices
-- [ ] Support for local device connections (planned)
+- [ ] Retrieve and manage devices (planned)
+- [ ] Support for local device connections
 
 ## Contributing
 
