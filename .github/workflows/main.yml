@@ -23,7 +23,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8'
+          dotnet-version: '8.*'
           
       - name: Build
         run: dotnet build ${{ env.TARGET_PROJECT }}
@@ -34,5 +34,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Nuget File
+          name: Nuget File `PXByte.TuyaNet.API.nupkg`
           path: ./KryptoPX.TuyaNet.API/bin/Release/*.nupkg
