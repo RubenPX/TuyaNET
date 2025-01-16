@@ -6,14 +6,6 @@ TuyaNET is a .NET library designed to interact with the Tuya API.
 
 - Connect to the Tuya API
 
-## Installation
-
-To install the library, you can use NuGet Package Manager:
-
-```bash
-Install-Package PXByte.TuyaNet.API
-```
-
 ## Configuration
 
 To use the TuyaNET library, you need to provide your Tuya API credentials. You can obtain these credentials by creating
@@ -28,10 +20,6 @@ an account on the [Tuya IoT Platform](https://iot.tuya.com/) and creating a new 
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request with any improvements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Acknowledgements
 
