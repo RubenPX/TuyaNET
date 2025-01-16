@@ -1,8 +1,6 @@
 # TuyaNET
 
-TuyaNET is a .NET library designed to interact with the Tuya API. This project allows you to connect and manage Tuya
-smart devices through the official API. Future plans may include support for local device connections, but this is not
-yet implemented.
+TuyaNET is a .NET library designed to interact with the Tuya API.
 
 ## Features
 
