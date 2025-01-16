@@ -1,4 +1,4 @@
-﻿namespace KryptoPX.TuyaNet.Core.Interfaces;
+﻿namespace KryptoPX.TuyaNet.API.Interfaces;
 
 public interface ITuyaResponse<T> {
     bool success { get; init; }

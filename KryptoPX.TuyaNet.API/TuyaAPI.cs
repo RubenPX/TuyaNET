@@ -1,10 +1,10 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
+using KryptoPX.TuyaNet.API.Interfaces;
 using KryptoPX.TuyaNet.Core.Entity;
-using KryptoPX.TuyaNet.Core.Interfaces;
 
-namespace KryptoPX.TuyaNet.Core;
+namespace KryptoPX.TuyaNet.API;
 
 public class TuyaAPI(string clientId, string secret, string baseURL = "https://openapi.tuyaeu.com") {
     private ITuyaTokenResult? tokenData = null;

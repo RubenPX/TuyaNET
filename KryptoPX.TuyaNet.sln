@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KryptoPX.TuyaNet.Core", "KryptoPX.TuyaNet.Core\KryptoPX.TuyaNet.Core.csproj", "{F9F091F6-FC54-4433-A5D4-FDC1CC0189EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KryptoPX.TuyaNet.API", "KryptoPX.TuyaNet.API\KryptoPX.TuyaNet.API.csproj", "{F9F091F6-FC54-4433-A5D4-FDC1CC0189EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

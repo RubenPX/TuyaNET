@@ -1,4 +1,4 @@
-﻿namespace KryptoPX.TuyaNet.Core.Interfaces;
+﻿namespace KryptoPX.TuyaNet.API.Interfaces;
 
 public interface ITuyaTokenResult {
     string access_token { get; init; }

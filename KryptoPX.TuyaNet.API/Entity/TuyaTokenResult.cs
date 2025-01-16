@@ -1,4 +1,4 @@
-﻿using KryptoPX.TuyaNet.Core.Interfaces;
+﻿using KryptoPX.TuyaNet.API.Interfaces;
 
 namespace KryptoPX.TuyaNet.Core.Entity;
 
