@@ -14,36 +14,6 @@ To install the library, you can use NuGet Package Manager:
 Install-Package PXByte.TuyaNET.API
 ```
 
-## Usage
-
-Here is a basic example of how to use TuyaNET to connect to the Tuya API and manage your devices:
-
-```csharp
-using TuyaNET;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        var api = new TuyaApi("your-client-id", "your-client-secret");
-
-        // Retrieve a list of devices
-        var devices = api.GetDevices();
-
-        foreach (var device in devices)
-        {
-            Console.WriteLine($"Device ID: {device.Id}, Name: {device.Name}");
-        }
-
-        // Control a device
-        var deviceId = "your-device-id";
-        api.ControlDevice(deviceId, "turnOn");
-
-        Console.WriteLine("Device turned on.");
-    }
-}
-```
-
 ## Configuration
 
 To use the TuyaNET library, you need to provide your Tuya API credentials. You can obtain these credentials by creating
