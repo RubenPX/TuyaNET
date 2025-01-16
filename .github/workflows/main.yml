@@ -20,12 +20,12 @@ jobs:
       CONFIGURATION: Release
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/upload-artifact@v4
         
       - name: Setup .NET
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 9.0.x
 
       - name: Build
         run: dotnet build ${{ env.OUTPUT_DIR }} -o ${{ env.OUTPUT_DIR }}
@@ -34,7 +34,7 @@ jobs:
         run: dotnet pack ${{ env.OUTPUT_DIR }} -o ${{ env.OUTPUT_DIR }}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.TUYA_API_NAME }}
           path: ${{ env.OUTPUT_DIR }}
