@@ -11,9 +11,9 @@ public class TuyaApi(string clientId, string secret, string baseURL = "https://o
 
     public async Task<string> getAccessToken() {
         tokenData ??= await GetTuyaToken("token null");
-        var expirationTime = DateTime.UtcNow.AddSeconds(tokenData.expire_time);
+        var expirationTime = DateTime.UtcNow.AddSeconds(tokenData!.expire_time);
         if (DateTime.UtcNow >= expirationTime) tokenData = await GetTuyaToken("token expired");
-        return tokenData.access_token;
+        return tokenData!.access_token;
     }
     
     public async Task<ITuyaResponse<T>> SendRequestAsync<T>(HttpMethod httpMethod, string url, string body = "", bool runWithoutToken = false) {
@@ -40,10 +40,10 @@ public class TuyaApi(string clientId, string secret, string baseURL = "https://o
         using HttpClient client = new HttpClient();
         HttpResponseMessage response = await client.SendAsync(request);
         string responseJson = await response.Content.ReadAsStringAsync();
-        return JsonSerializer.Deserialize<TuyaResponse<T>>(responseJson);
+        return JsonSerializer.Deserialize<TuyaResponse<T>>(responseJson)!;
     }
     
-    private async Task<ITuyaTokenResult> GetTuyaToken(string reason) {
+    private async Task<ITuyaTokenResult?> GetTuyaToken(string reason) {
         var response = await SendRequestAsync<TuyaTokenResult>(HttpMethod.Get, "/v1.0/token?grant_type=1", runWithoutToken: true);
         return response.result!;
     }
