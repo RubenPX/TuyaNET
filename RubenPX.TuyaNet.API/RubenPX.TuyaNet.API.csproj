@@ -10,11 +10,11 @@
     
     <!-- Nuget Info -->
     <PropertyGroup>
-        <Version>1.0.1.1</Version>
+        <Version>1.0.0</Version>
         
         <PackageId>RubenPX.TuyaNet.API</PackageId>
         <Title>TuyaNet API</Title>
-        <Description>Package to comunicate with Tuya API</Description>
+        <Description>Package to comunicate with Tuya API (Auth implemented)</Description>
         <Authors>RubenPX</Authors>
         <RepositoryUrl>https://github.com/RubenPX/TuyaNet</RepositoryUrl>
         <RepositoryType>Package</RepositoryType>

@@ -15,7 +15,7 @@ public partial class TuyaApi(string clientId, string secret, string baseURL = "h
         return tokenData!.access_token;
     }
 
-    public async Task<ITuyaResponse> SendRequestAsync(HttpMethod httpMethod, string url, object? body = null, bool runWithoutToken = false) {
+    public async Task<ITuyaResponse?> SendRequestAsync(HttpMethod httpMethod, string url, object? body = null, bool runWithoutToken = false) {
         return await SendRequestAsync<object>(httpMethod, url, body, runWithoutToken) as ITuyaResponse;
     }
 
