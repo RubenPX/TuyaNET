@@ -27,7 +27,7 @@ an account on the [Tuya IoT Platform](https://iot.tuya.com/) and creating a new 
   - [ ] [Device Control (Standard Instruction Set)](https://developer.tuya.com/en/docs/cloud/device-connection-service?id=Kb0b8geg6o761#title-4-Device%20Control(Standard%20Instruction%20Set))
   - [ ] [Device Group](https://developer.tuya.com/en/docs/cloud/device-connection-service?id=Kb0b8geg6o761#title-5-Device%20Group)
 - [ ] [Smart Home Basic Service](https://developer.tuya.com/en/docs/cloud/smart-home-basic-service?id=Kconis1yii4be)
-  - [ ] [Home Management](https://developer.tuya.com/en/docs/cloud/smart-home-basic-service?id=Kconis1yii4be#title-0-Home%20Management)
+  - [ ] [Home Management](https://developer.tuya.com/en/docs/cloud/smart-home-basic-service?id=Kconis1yii4be#title-0-Home%20Management) (In Progress)
   - [ ] [Smart Home User Management](https://developer.tuya.com/en/docs/cloud/smart-home-basic-service?id=Kconis1yii4be#title-1-Smart%20Home%20User%20Management)
   - [ ] [Smart Home Application Management](https://developer.tuya.com/en/docs/cloud/smart-home-basic-service?id=Kconis1yii4be#title-2-Smart%20Home%20Application%20Management)
   - [ ] [Smart Home Network Management](https://developer.tuya.com/en/docs/cloud/smart-home-basic-service?id=Kconis1yii4be#title-3-Smart%20Home%20Network%20Management)
