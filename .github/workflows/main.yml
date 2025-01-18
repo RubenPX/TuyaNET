@@ -11,10 +11,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-APIBase:
     runs-on: ubuntu-24.04
     env:
-      TARGET_PROJECT: ./KryptoPX.TuyaNet.API/KryptoPX.TuyaNet.API.csproj
+      TARGET_PROJECT: ./RubenPX.TuyaNet.API/RubenPX.TuyaNet.API.csproj
       CONFIGURATION: Release
     steps:
       - name: Checkout
@@ -31,5 +31,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: KryptoPX.TuyaNet.API
-          path: ./KryptoPX.TuyaNet.API/bin/Release/*.nupkg
+          name: RubenPX.TuyaNet.API
+          path: ./RubenPX.TuyaNet.API/bin/Release/*.nupkg

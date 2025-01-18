@@ -15,7 +15,7 @@
         <PackageId>RubenPX.TuyaNet.API</PackageId>
         <Title>TuyaNet API</Title>
         <Description>Package to comunicate with Tuya API</Description>
-        <Authors>KryptoPX</Authors>
+        <Authors>RubenPX</Authors>
         <RepositoryUrl>https://github.com/RubenPX/TuyaNet</RepositoryUrl>
         <RepositoryType>Package</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>

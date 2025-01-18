@@ -1,4 +1,4 @@
-﻿using RubenPX.TuyaNet.API.ResponteInterfaces;
+﻿using RubenPX.TuyaNet.API.Response;
 using RubenPX.TuyaNET.Home.Request.AddHome;
 
 namespace RubenPX.TuyaNET.Home;

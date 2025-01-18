@@ -49,7 +49,7 @@ public partial class TuyaApi(string clientId, string secret, string baseURL = "h
     }
     
     private async Task<ITuyaTokenResult?> GetInternalTuyaToken(string reason) {
-        var response = await GetaToken(new("1"));
+        var response = await GetaToken(new GetaTokenRequest("1"));
         if (!string.IsNullOrWhiteSpace(response.msg)) {
 #if DEBUG
             Console.WriteLine($"GetInternalTuyaToken: Failed | {reason} | {response.msg}");
