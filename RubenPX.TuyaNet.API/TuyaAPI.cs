@@ -2,6 +2,7 @@
 using System.Text;
 using System.Text.Json;
 using RubenPX.TuyaNet.API.Response;
+using RubenPX.TuyaNet.API.Utils;
 
 namespace RubenPX.TuyaNet.API;
 
@@ -14,13 +15,14 @@ public partial class TuyaApi(string clientId, string secret, string baseURL = "h
         if (DateTime.UtcNow >= expirationTime) tokenData = await GetInternalTuyaToken("token expired");
         return tokenData!.access_token;
     }
-
-    public async Task<ITuyaResponse?> SendRequestAsync(HttpMethod httpMethod, string url, object? body = null, bool runWithoutToken = false) {
-        return await SendRequestAsync<object>(httpMethod, url, body, runWithoutToken) as ITuyaResponse;
+    
+    public async Task<ITuyaResponse> SendRequestAsync(HttpMethod httpMethod, string url, object? body = null, bool runWithoutToken = false) {
+        return (await SendRequestAsync<object>(httpMethod, url, body, null, runWithoutToken) as ITuyaResponse)!;
     }
 
-    public async Task<ITuyaResponse<T>> SendRequestAsync<T>(HttpMethod httpMethod, string url, object? body = null, bool runWithoutToken = false) {
-        string fullUrl = $"{baseURL}{url}";
+    public async Task<ITuyaResponse<T>> SendRequestAsync<T>(HttpMethod httpMethod, string url, object? body = null, Dictionary<string, string?>? queryParameters = null, bool runWithoutToken = false) {
+        string buildedParameters = RequestTransformer.GenerateUrlParameters(queryParameters);
+        string fullUrl = $"{baseURL}{url}{buildedParameters}";
         string timestamp = GetTime().ToString();
         
         string token = runWithoutToken ? "" : await getAccessToken();

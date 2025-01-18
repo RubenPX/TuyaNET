@@ -58,17 +58,16 @@ public class GetaTokenRequest(string grant_type) : IGetaTokenRequest {
 
 public partial class TuyaApi {
     /// <summary>
-    /// Get tuya token <br />
-    /// https://developer.tuya.com/en/docs/cloud/6c1636a9bd?id=Ka7kjumkoa53v
+    /// <a href="https://developer.tuya.com/en/docs/cloud/6c1636a9bd?id=Ka7kjumkoa53v">
+    ///     <c>GET: /v1.0/token</c>
+    /// </a>
+    /// Get tuya token
     /// </summary>
-    public async Task<ITuyaResponse<ITuyaTokenResult>> GetaToken(IGetaTokenRequest reqParams, bool runWithoutToken = true) {
-        string parameters = RequestTransformer.GenerateUrlParameters(new() {
-            { "grant_type", reqParams.grant_type },
-            { "code", reqParams.code },
-            { "terminal_id", reqParams.terminal_id },
-            { "target_uid", reqParams.target_uid },
-        });
-        
-        return await SendRequestAsync<ITuyaTokenResult>(HttpMethod.Get, $"/v1.0/token?{parameters}", runWithoutToken);
-    }
+    public async Task<ITuyaResponse<ITuyaTokenResult>> GetaToken(IGetaTokenRequest reqData, bool runWithoutToken = true) =>
+        await SendRequestAsync<ITuyaTokenResult>(HttpMethod.Get, $"/v1.0/token", new Dictionary<string, string?>() {
+            { "grant_type", reqData.grant_type },
+            { "code", reqData.code },
+            { "terminal_id", reqData.terminal_id },
+            { "target_uid", reqData.target_uid },
+        }, null, runWithoutToken);
 }
