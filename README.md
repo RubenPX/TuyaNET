@@ -6,7 +6,7 @@ TuyaNET is a .NET library designed to interact with the Tuya API.
 
 | Service Name | Package ID | Nuget |
 | ------------ | ---------- | ----- | 
-| [Authorization Token Management](./RubenPX.TuyaNet.API/README.md) | `RubenPX.TuyaNet.API` | [![NugetPackage](https://img.shields.io/nuget/v/RubenPX.TuyaNet.API)](https://www.nuget.org/packages/RubenPX.TuyaNet.API/) | 
+| [Authorization Token Management](./RubenPX.TuyaNet.API/) | `RubenPX.TuyaNet.API` | [![NugetPackage](https://img.shields.io/nuget/v/RubenPX.TuyaNet.API)](https://www.nuget.org/packages/RubenPX.TuyaNet.API/) | 
 
 ## Configuration
 
