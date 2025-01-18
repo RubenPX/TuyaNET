@@ -1,12 +1,8 @@
-# Authorization Token Management
+# Smart Home Basic Service
 
-This product provides APIs related to the token management of cloud development. You can use the authorization keys (Access ID/Client ID and Access Secret/Client Secret) to get a token to access other APIs.
+Provides Tuya smart home basic abilities
 
-## Implementations
-
-[Smart Home Basic Service](https://developer.tuya.com/en/docs/cloud/smart-home-basic-service?id=Kconis1yii4be): Provides Tuya smart home basic abilities
-
-## Implemented API
+## Implemented APIs
 
 | Api Route Name | URL | Description |
 | -------------- | --- | ----------- |
