@@ -20,17 +20,17 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="KryptoPX.TuyaNet.API" Version="1.0.1.1" />
+      <ProjectReference Include="..\RubenPX.TuyaNet.API\RubenPX.TuyaNet.API.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Entity\" />
-      <Folder Include="Request\" />
-      <Folder Include="Response\AddHome\" />
+        <None Include="../README.md" Pack="true" PackagePath="/"/>
+        <None Include="../LICENSE" Pack="true" PackagePath="/"/>
     </ItemGroup>
 
 </Project>

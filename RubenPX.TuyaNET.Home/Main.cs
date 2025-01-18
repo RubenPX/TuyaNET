@@ -1,7 +1,5 @@
-﻿using KryptoPX.TuyaNet.API;
+﻿using RubenPX.TuyaNet.API;
 
-namespace KryptoPX.Tuya.Home;
+namespace RubenPX.TuyaNET.Home;
 
-public partial class HomeManagement {
-    private TuyaApi api;
-}
+public partial class HomeManagement(TuyaApi api);

@@ -1,4 +1,4 @@
-# TuyaNET <span align=right><a href="https://www.nuget.org/packages/KryptoPX.TuyaNet.API/" ><img src="https://img.shields.io/nuget/v/KryptoPX.TuyaNet.API" /></a> [![Build and pack](https://github.com/RubenPX/TuyaNET/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/RubenPX/TuyaNET/actions/workflows/main.yml)</span>
+# TuyaNET [![NugetPackage](https://img.shields.io/nuget/v/KryptoPX.TuyaNet.API)](https://www.nuget.org/packages/KryptoPX.TuyaNet.API/) [![Build and pack](https://github.com/RubenPX/TuyaNET/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/RubenPX/TuyaNET/actions/workflows/main.yml)
 
 TuyaNET is a .NET library designed to interact with the Tuya API.
 

@@ -1,6 +1,12 @@
-﻿using RubenPX.TuyaNet.API.ResponteInterfaces;
+﻿namespace RubenPX.TuyaNet.API.Response;
 
-namespace RubenPX.TuyaNet.API.ResponseObjects;
+public interface ITuyaPaginationResponse<T> {
+    public string Message { get; }
+    public string current_row_key { get; }
+    public string device_id { get; }
+    public bool has_next { get; }
+    public List<T> data { get; }
+}
 
 public class TuyaPaginationResponse<T>(string message, string currentRowKey, string deviceId, bool hasNext, List<T> data) : ITuyaPaginationResponse<T> {
     public string Message { get; } = message;

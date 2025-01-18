@@ -1,18 +1,17 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
-using KryptoPX.TuyaNet.Core.Entity;
-using RubenPX.TuyaNet.API.Interfaces;
+using RubenPX.TuyaNet.API.Response;
 
 namespace RubenPX.TuyaNet.API;
 
-public class TuyaApi(string clientId, string secret, string baseURL = "https://openapi.tuyaeu.com") {
+public partial class TuyaApi(string clientId, string secret, string baseURL = "https://openapi.tuyaeu.com") {
     private ITuyaTokenResult? tokenData = null;
 
     public async Task<string> getAccessToken() {
-        tokenData ??= await GetTuyaToken("token null");
+        tokenData ??= await GetInternalTuyaToken("token null");
         var expirationTime = DateTime.UtcNow.AddSeconds(tokenData!.expire_time);
-        if (DateTime.UtcNow >= expirationTime) tokenData = await GetTuyaToken("token expired");
+        if (DateTime.UtcNow >= expirationTime) tokenData = await GetInternalTuyaToken("token expired");
         return tokenData!.access_token;
     }
 
@@ -49,8 +48,17 @@ public class TuyaApi(string clientId, string secret, string baseURL = "https://o
         return JsonSerializer.Deserialize<TuyaResponse<T>>(responseJson)!;
     }
     
-    private async Task<ITuyaTokenResult?> GetTuyaToken(string reason) {
-        var response = await SendRequestAsync<TuyaTokenResult>(HttpMethod.Get, "/v1.0/token?grant_type=1", runWithoutToken: true);
+    private async Task<ITuyaTokenResult?> GetInternalTuyaToken(string reason) {
+        var response = await GetaToken(new("1"));
+        if (!string.IsNullOrWhiteSpace(response.msg)) {
+#if DEBUG
+            Console.WriteLine($"GetInternalTuyaToken: Failed | {reason} | {response.msg}");
+#endif
+            throw new HttpRequestException($"Failed to get Tuya Token: {response.msg}");
+        }
+#if DEBUG
+        Console.WriteLine($"GetInternalTuyaToken: OK | {reason}");
+#endif
         return response.result!;
     }
     

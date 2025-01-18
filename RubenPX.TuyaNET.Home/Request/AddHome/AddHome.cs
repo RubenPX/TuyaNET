@@ -1,4 +1,4 @@
-﻿namespace KryptoPX.Tuya.Home.Entity.AddHome;
+﻿namespace RubenPX.TuyaNET.Home.Request.AddHome;
 
 public class AddHome(string uuid, HomeObject home, List<string>? rooms = null) {
     public string uuid { get; set; } = uuid;

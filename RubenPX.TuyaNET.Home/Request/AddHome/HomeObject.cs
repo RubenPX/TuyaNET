@@ -1,4 +1,4 @@
-﻿namespace KryptoPX.Tuya.Home.Entity.AddHome;
+﻿namespace RubenPX.TuyaNET.Home.Request.AddHome;
 
 public class HomeObject(string name, double lon, double lat, string? geoName = null) {
     /// <summary>The name of a home.</summary>

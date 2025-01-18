@@ -29,10 +29,4 @@
         <None Include="../LICENSE" Pack="true" PackagePath="/"/>
         <PackageReference Include="System.Text.Json" Version="9.0.1" />
     </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\KryptoPX.TuyaNET.Home\KryptoPX.TuyaNET.Home.csproj" />
-    </ItemGroup>
-
-
 </Project>
