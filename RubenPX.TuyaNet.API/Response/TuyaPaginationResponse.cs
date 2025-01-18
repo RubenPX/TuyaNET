@@ -1,6 +1,6 @@
-﻿using KryptoPX.TuyaNet.API.Interfaces;
+﻿using RubenPX.TuyaNet.API.ResponteInterfaces;
 
-namespace KryptoPX.TuyaNet.Core.Entity;
+namespace RubenPX.TuyaNet.API.ResponseObjects;
 
 public class TuyaPaginationResponse<T>(string message, string currentRowKey, string deviceId, bool hasNext, List<T> data) : ITuyaPaginationResponse<T> {
     public string Message { get; } = message;

@@ -6,18 +6,15 @@
         <AssemblyName>TuyaNet</AssemblyName>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        
     </PropertyGroup>
-    
+
     <!-- Nuget Info -->
     <PropertyGroup>
-        <Version>1.0.1</Version>
-        
-        <PackageId>KryptoPX.TuyaNet.API</PackageId>
+        <Version>1.0.1.1</Version>
+        <PackageId>KryptoPX.TuyaNet.Home</PackageId>
         <Title>TuyaNet API</Title>
         <Description>Package to comunicate with Tuya API</Description>
         <Authors>KryptoPX</Authors>
-        <Copyright></Copyright>
         <RepositoryUrl>https://github.com/RubenPX/TuyaNet</RepositoryUrl>
         <RepositoryType>Package</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -27,10 +24,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="../README.md" Pack="true" PackagePath="/"/>
-        <None Include="../LICENSE" Pack="true" PackagePath="/"/>
-        <PackageReference Include="System.Text.Json" Version="9.0.1" />
+      <PackageReference Include="KryptoPX.TuyaNet.API" Version="1.0.1.1" />
     </ItemGroup>
-
 
 </Project>

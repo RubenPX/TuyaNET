@@ -1,10 +1,10 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
-using KryptoPX.TuyaNet.API.Interfaces;
 using KryptoPX.TuyaNet.Core.Entity;
+using RubenPX.TuyaNet.API.Interfaces;
 
-namespace KryptoPX.TuyaNet.API;
+namespace RubenPX.TuyaNet.API;
 
 public class TuyaApi(string clientId, string secret, string baseURL = "https://openapi.tuyaeu.com") {
     private ITuyaTokenResult? tokenData = null;
@@ -15,8 +15,12 @@ public class TuyaApi(string clientId, string secret, string baseURL = "https://o
         if (DateTime.UtcNow >= expirationTime) tokenData = await GetTuyaToken("token expired");
         return tokenData!.access_token;
     }
-    
-    public async Task<ITuyaResponse<T>> SendRequestAsync<T>(HttpMethod httpMethod, string url, string body = "", bool runWithoutToken = false) {
+
+    public async Task<ITuyaResponse> SendRequestAsync(HttpMethod httpMethod, string url, object? body = null, bool runWithoutToken = false) {
+        return await SendRequestAsync<object>(httpMethod, url, body, runWithoutToken) as ITuyaResponse;
+    }
+
+    public async Task<ITuyaResponse<T>> SendRequestAsync<T>(HttpMethod httpMethod, string url, object? body = null, bool runWithoutToken = false) {
         string fullUrl = $"{baseURL}{url}";
         string timestamp = GetTime().ToString();
         
@@ -24,12 +28,14 @@ public class TuyaApi(string clientId, string secret, string baseURL = "https://o
         
         // @RubenPX: PTM casi una tarde entera para descifrar esto y hacer que funcione...
         // Aplicamos la especificación requerida por tuya : https://developer.tuya.com/en/docs/iot/api-request?id=Ka4a8uuo1j4t4
-        string stringToSign = StringToSign(httpMethod.ToString().ToUpperInvariant(), url, body);
+        string jsonRequest = body != null ? JsonSerializer.Serialize(body) : "";
+        string stringToSign = StringToSign(httpMethod.ToString().ToUpperInvariant(), url, jsonRequest);
         string str = clientId + token + timestamp + stringToSign;
         string sign = CalcSign(str);
         
         // Prepare request
         HttpRequestMessage request = new HttpRequestMessage(httpMethod, fullUrl);
+        if (body != null) request.Content = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
         request.Headers.Add("client_id", clientId);
         request.Headers.Add("sign", sign);
         request.Headers.Add("t", timestamp);
