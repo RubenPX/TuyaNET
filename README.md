@@ -1,5 +1,10 @@
 # TuyaNET [![Build and pack](https://github.com/RubenPX/TuyaNET/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/RubenPX/TuyaNET/actions/workflows/main.yml)
 
+> [!warn]
+> When i try to implement testing... Sometimes work and sometimes is not working... Fck Tuya
+>
+> https://github.com/home-assistant/core/pull/133921
+
 TuyaNET is a .NET library designed to interact with the Tuya API.
 
 ## Features
